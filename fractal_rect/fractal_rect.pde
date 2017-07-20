@@ -1,8 +1,5 @@
-// 20170618
-// made by datchan
-
-float INIT_SIDE = 600;
-int MAXNUM = 10;
+final float INIT_SIDE = 600;
+final int MAXNUM = 11;
 
 int num;
 
@@ -30,6 +27,13 @@ void drawRect(int n, float x, float y) {
 
   int side = (int)(INIT_SIDE/pow(2, n));
   rect(x, y, side, side);
+  /*
+  int rand = (int)random(16);
+   if((rand>>>3)%2==1)drawRect(n+1,x+side/4,y-side/4);
+   if((rand>>>2)%2==1)drawRect(n+1,x-side/4,y-side/4);
+   if((rand>>>1)%2==1)drawRect(n+1,x-side/4,y+side/4);
+   if((rand>>>0)%2==1)drawRect(n+1,x+side/4,y+side/4);  
+   */
   int rand = (int)random(4.2);
   if (rand!=0)drawRect(n+1, x+side/4, y-side/4);
   if (rand!=1)drawRect(n+1, x-side/4, y-side/4);
